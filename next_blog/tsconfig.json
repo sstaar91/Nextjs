@@ -20,10 +20,12 @@
     "baseUrl": ".",
     "paths": {
       "@_assets/*": ["src/assets/*"],
+      "@_constants/*": ["src/constants/*"],
       "@_components/*": ["src/components/*"],
       "@_hooks/*": ["src/hooks/*"],
       "@_lib/*": ["src/lib/*"],
       "@_styles/*": ["src/styles/*"],
+      "@_types/*": ["src/types/*"],
       "@_utils/*": ["src/utils/*"]
     }
   },
