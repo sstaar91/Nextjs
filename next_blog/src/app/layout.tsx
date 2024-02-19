@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_KR } from 'next/font/google'
-import GlobalStyle from '@_styles/GlobalStyle'
-import Nav from '@_components/Nav'
+import '@_styles/global.css'
 
 const noto = Noto_Sans_KR({ subsets: ['latin'] })
 
@@ -17,11 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GlobalStyle />
-      <body className={noto.className}>
-        <Nav />
-        {children}
-      </body>
+      <body className={noto.className}>{children}</body>
     </html>
   )
 }
