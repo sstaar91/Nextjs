@@ -13,7 +13,7 @@ const SignIn = () => {
   const router = useRouter();
 
   const onClickSigninBtn = () => {
-    router.replace("/main");
+    router.push("/main");
   };
 
   return (
@@ -33,7 +33,9 @@ const SignIn = () => {
                 <button
                   key={id}
                   onClick={onClickSigninBtn}
-                  className={`flex items-center justify-center gap-2 px-2 py-1 rounded-xl ${title === "naver" ? "bg-[#01c73d]" : "bg-[#fddc40]"}`}
+                  className={`flex items-center justify-center gap-2 px-2 py-1 rounded-xl hover:shadow-[5px_5px_1px_0_rgba(0,0,0,0.3)] transition-all ${
+                    title === "naver" ? "bg-naver" : "bg-kakao"
+                  } `}
                 >
                   <Image src={src} alt={title} className="w-10 h-10 rounded-full" />
                   <div className={`${title === "naver" ? "text-white" : "text-black"} font-bold`}>{text}</div>
