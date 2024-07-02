@@ -1,11 +1,15 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+
 import Logo from "@/components/Logo";
 
-const buttonStyle = `w-[110px] h-[140px] py-1 px-3 rounded-xl font-medium whitespace-pre-line defaultBorder transition-all`;
+import Soccer from "@_assets/img/mainPage.jpg";
+import kakao from "@_assets/img/logo_kakao.png";
+import naver from "@_assets/img/logo_naver.png";
 
-const Home = () => {
+const SignIn = () => {
   const router = useRouter();
 
   const onClickSigninBtn = () => {
@@ -13,21 +17,43 @@ const Home = () => {
   };
 
   return (
-    <main className="flexCenter h-screen">
-      <div className="defaultBorder flexCenter flex-col gap-4 p-8 min-w-[280px] h-[400px]">
-        <Logo />
-        <h1 className="mt-2 mb-4 text-3xl font-bold">EVERY SOCCER</h1>
-        <div className="flex gap-8">
-          <button onClick={onClickSigninBtn} className={`${buttonStyle} text-green-500 hover:bg-green-500 hover:text-white hover:border-none`}>
-            {"네이버로\n로그인하기"}
-          </button>
-          <button onClick={onClickSigninBtn} className={`${buttonStyle} text-yellow-300 hover:bg-yellow-300 hover:text-black hover:border-none`}>
-            {"카톡으로\n로그인하기"}
-          </button>
+    <main className="relative">
+      <div>
+        <Image src={Soccer} alt="" className="w-screen h-screen" />
+      </div>
+      <div className="flexCenter flex-col absolute top-0 left-0 w-screen h-screen bg-gray-900/90">
+        <div className="flex justify-between items-center flex-col gap-2 px-4 py-8 defaultBorder min-w-[280px] h-[400px]">
+          <div className="flex items-center flex-col gap-4">
+            <Logo />
+            <h1 className="text-3xl font-bold whitespace-pre-line text-center">{"EVERY\nSOCCER"}</h1>
+          </div>
+          <div className="flex flex-col gap-4 w-full">
+            {SIGNIN_LIST.map(({ id, title, src, text }) => {
+              return (
+                <button
+                  key={id}
+                  onClick={onClickSigninBtn}
+                  className={`flex items-center justify-center gap-2 px-2 py-1 rounded-xl ${title === "naver" ? "bg-[#01c73d]" : "bg-[#fddc40]"}`}
+                >
+                  <Image src={src} alt={title} className="w-10 h-10 rounded-full" />
+                  <div className={`${title === "naver" ? "text-white" : "text-black"} font-bold`}>{text}</div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="flex flex-col items-center mt-8">
+          <span className="text-sm">땀에 젖은 유니폼, 그것이 내가 보여줄 수 있는 전부다</span>
+          <span className="text-xs">- Paul Scholes -</span>
         </div>
       </div>
     </main>
   );
 };
 
-export default Home;
+export default SignIn;
+
+const SIGNIN_LIST = [
+  { id: 1, title: "naver", src: naver, text: "네이버로 로그인하기" },
+  { id: 2, title: "kakao", src: kakao, text: "카카오로 로그인하기" },
+];
