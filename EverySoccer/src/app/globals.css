@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
+
+.defaultBorder {
+  @apply border-solid border-4 border-white rounded-2xl;
+}
