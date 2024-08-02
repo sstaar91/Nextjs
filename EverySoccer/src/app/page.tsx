@@ -22,9 +22,9 @@ const SignIn = () => {
         <Image src={Soccer} alt="" className="w-screen h-screen" />
       </div>
       <div className="flexCenter flex-col absolute top-0 left-0 w-screen h-screen bg-gray-900/90">
-        <div className="flex justify-between items-center flex-col gap-2 px-4 py-8 defaultBorder min-w-[280px] h-[400px]">
+        <div className="flex justify-between items-center flex-col gap-2 px-4 py-8 defaultBorder min-w-[280px] h-[360px]">
           <div className="flex items-center flex-col gap-4">
-            <Logo />
+            <Logo size={48} />
             <h1 className="text-3xl font-bold whitespace-pre-line text-center">{"EVERY\nSOCCER"}</h1>
           </div>
           <div className="flex flex-col gap-4 w-full">

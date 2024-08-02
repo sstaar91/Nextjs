@@ -1,7 +1,5 @@
-import React from "react";
-
 const MainPage = () => {
-  return <main>123</main>;
+  return <main className="my-0 mx-auto p-6 max-w-[1280px]">홈</main>;
 };
 
 export default MainPage;

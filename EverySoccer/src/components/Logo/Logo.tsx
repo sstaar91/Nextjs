@@ -1,10 +1,14 @@
 import Image from "next/image";
 import logo from "@_assets/img/logo.png";
 
-const Logo = () => {
+interface Props {
+  size: number;
+}
+
+const Logo = ({ size }: Props) => {
   return (
-    <div className="w-12 h-12 rounded-xl bg-white">
-      <Image src={logo} alt="logo" />
+    <div className={`rounded-xl bg-white`}>
+      <Image src={logo} alt="logo" width={size} height={size} />
     </div>
   );
 };
