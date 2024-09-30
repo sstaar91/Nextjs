@@ -7,7 +7,7 @@ interface Props {
 
 const Logo = ({ size }: Props) => {
   return (
-    <div className={`rounded-xl bg-white`}>
+    <div>
       <Image src={logo} alt="logo" width={size} height={size} />
     </div>
   );

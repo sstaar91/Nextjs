@@ -1,13 +1,13 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
-import Logo from "@/components/Logo";
+import { Carousel } from "@/components/molecules";
+import { Matching } from "@/components/cards";
 
-import Soccer from "@_assets/img/mainPage.jpg";
 import kakao from "@_assets/img/logo_kakao.png";
 import naver from "@_assets/img/logo_naver.png";
+import "./home.css";
 
 const SignIn = () => {
   const router = useRouter();
@@ -17,7 +17,23 @@ const SignIn = () => {
   };
 
   return (
-    <main className="relative">
+    <main className="container">
+      <section className="w-full">
+        <Carousel />
+        <h3 className="text-xl font-bold">경기 리스트</h3>
+        <div></div>
+      </section>
+
+      {/* <Image src={Soccer} alt="" className="w-screen" />
+      <article className="relative flex flex-row-reverse p-4 w-[900px] h-fit">
+        <div className="absolute inset-0 flex items-center justify p-4 h-full bg-gradient-to-r from-[#2b2b2b] from-50% to-transparent z-10 text-6xl font-bold leading-relaxed whitespace-pre-wrap">
+          <span>{`전국 랭킹부터\n개인 분석 차트까지\n에브리사커`}</span>
+          <div className="w-[200px]">
+            <Cta title="KICK OFF" type="main" onClickCta={onClickSigninBtn} />
+          </div>
+        </div>
+        <Image src={Soccer} alt="" className="rounded-2xl grayscale-[80%]" />
+      </article>
       <div>
         <Image src={Soccer} alt="" className="w-screen h-screen" />
       </div>
@@ -48,7 +64,7 @@ const SignIn = () => {
           <span className="text-sm">땀에 젖은 유니폼, 그것이 내가 보여줄 수 있는 전부다</span>
           <span className="text-xs">- Paul Scholes -</span>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 };

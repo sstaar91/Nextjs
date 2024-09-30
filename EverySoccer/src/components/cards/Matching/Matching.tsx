@@ -2,7 +2,7 @@ import React from "react";
 
 const Matching = () => {
   return (
-    <div className="flex items-center justify-center flex-col gap-2 mt-4">
+    <div className="flex items-center justify-center flex-col gap-2 my-4 p-2 rounded-xl">
       <div className="flex items-center gap-4">
         <div className="text-xs">24.08.05</div>
         <div className="text-xs">중랑 구립 구장 (양원역)</div>

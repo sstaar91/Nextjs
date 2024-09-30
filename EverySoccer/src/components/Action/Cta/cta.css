@@ -1,0 +1,3 @@
+.main {
+  @apply bg-primary hover:shadow-[0_0_10px_0_#28cc6c] hover:border-primary hover:bg-transparent transition-all;
+}
