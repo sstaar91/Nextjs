@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .container {
-  @apply flex items-center flex-col mx-auto p-6 pt-[82px] max-w-[1280px] h-screen;
+  @apply flex items-center flex-col relative mx-auto p-6 pt-[82px] max-w-[1280px] h-screen;
 }

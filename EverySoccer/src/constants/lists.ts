@@ -10,3 +10,9 @@ export const MAIN_CAROUSEL_LIST = [
   { id: 2, title: `기록을 통해\n내 성장을\n확인하세요`, color: "green" },
   { id: 3, title: `내 팀을 한 눈에 보고\n손쉽게 관리하세요`, color: "yellow" },
 ];
+
+export const MAIN_CATEGORY_LIST = [
+  { id: 1, title: `팀 매칭`, name: "team", color: "pink" },
+  { id: 2, title: `용병 매칭`, name: "mercenary", color: "green" },
+  { id: 3, title: `심판 매칭`, name: "referee", color: "yellow" },
+];
