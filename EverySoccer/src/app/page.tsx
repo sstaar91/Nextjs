@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Carousel } from "@/components/molecules";
 import { Matching } from "@/components/cards";
 
+import { MAIN_CAROUSEL_LIST } from "@/constants/lists";
 import kakao from "@_assets/img/logo_kakao.png";
 import naver from "@_assets/img/logo_naver.png";
 import "./home.css";
@@ -13,13 +14,13 @@ const SignIn = () => {
   const router = useRouter();
 
   const onClickSigninBtn = () => {
-    router.push("/main");
+    router.push("/");
   };
 
   return (
     <main className="container">
+      <Carousel images={MAIN_CAROUSEL_LIST} />
       <section className="w-full">
-        <Carousel />
         <h3 className="text-xl font-bold">경기 리스트</h3>
         <div></div>
       </section>

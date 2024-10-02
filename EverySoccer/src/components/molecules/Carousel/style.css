@@ -1,0 +1,11 @@
+.pink {
+  @apply bg-pink-400;
+}
+
+.green {
+  @apply bg-green-400;
+}
+
+.yellow {
+  @apply bg-yellow-400;
+}
